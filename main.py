@@ -241,8 +241,7 @@ def main():
 
                     if tweet_created_at > last_checked:
                         tweet_id = tweet["id"]
-                        if tweet["media_keys"]:
-                            retry_with_backoff(3, api.retweet_tweet, user_id=api.auth_user_id, tweet_id=tweet_id)
+                        retry_with_backoff(3, api.retweet_tweet, user_id=api.auth_user_id, tweet_id=tweet_id)
                         time.sleep(2)
             except Exception as e:
                 logger.error(f"Error with account {account}: {e}")

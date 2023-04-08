@@ -1,0 +1,4 @@
+pytwitter
+python-twitter-v2
+tweepy
+psycopg2==2.9.6

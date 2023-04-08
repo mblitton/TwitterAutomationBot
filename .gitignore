@@ -1,0 +1,16 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.swp
+*.swo
+*.swn
+*.sqlite3
+*.egg-info/
+dist/
+build/
+.virtualenv/
+.env
+*.env.*

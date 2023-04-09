@@ -120,7 +120,7 @@ def get_embed_accounts(api):
             break
 
     if vip_list is not None:
-        members = api.get_list_members(list_id=vip_list.id)
+        members = api.get_list_members(list_id=vip_list.id, count=200)
         for member in members:
             vip_accounts.append(member.screen_name)
     else:
@@ -145,7 +145,7 @@ def get_like_accounts(api):
             like_list = lst
             break
     if like_list is not None:
-        members = api.get_list_members(list_id=like_list.id)
+        members = api.get_list_members(list_id=like_list.id, count=200)
         for member in members:
             like_accounts.append(member.screen_name)
     else:
@@ -169,7 +169,7 @@ def get_rt_accounts(api):
             rt_list = lst
             break
     if rt_list is not None:
-        members = api.get_list_members(list_id=rt_list.id)
+        members = api.get_list_members(list_id=rt_list.id, count=200)
         for member in members:
             rt_accounts.append(member.screen_name)
     else:
